@@ -1,0 +1,13 @@
+// Fetch API - Async await
+
+const url = "https://jsonplaceholder.typicode.com/comments"
+
+const consultarAPI = async () => {
+    const respuesta = await fetch(url)
+    const resultado = await respuesta.json()
+    resultado.forEach(comentario => {
+        console.log(comentario);
+    });
+}
+
+consultarAPI()
